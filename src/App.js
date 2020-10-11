@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import './App.css';
 
 function App() {
-    const [counters, setCounters] = useState([1, 1, 1]);
+    const [counters, setCounters] = useState([30, 20, 10]);
 
     const addCounter=() => {
         const arr = [...counters];
@@ -15,7 +15,7 @@ function App() {
     return (
         <div className='App'>
             <button onClick={addCounter}>AddNewCounters</button>
-            {counters.map((el, ind)=><li>{ind}</li>)}
+            {counters.map((el, ind)=><li>Counter{ind+1}<button>-</button>({el})<button>+</button></li>)}
 
         </div>
     );
